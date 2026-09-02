@@ -1,0 +1,499 @@
+
+/* =========================================
+   FEATURE 1: GLOBAL STYLES
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #09090b;
+    --sidebar: #0d0d10;
+    --card: #111116;
+    --card-hover: #15151b;
+    --border: #24242c;
+    --text: #f4f4f5;
+    --muted: #8b8b96;
+    --accent: #f59e0b;
+    --accent-light: #fbbf24;
+}
+
+body {
+    font-family: Inter,Segoe UI,Arial,sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   FEATURE 1: MAIN APP LAYOUT
+   ========================================= */
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   FEATURE 1: SIDEBAR
+   ========================================= */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: var(--sidebar);
+    border-right: 1px solid var(--border);
+    padding: 28px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* FEATURE 1: Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 12px;
+    margin-bottom: 45px;
+}
+
+.logo span {
+    font-size: 28px;
+}
+
+.logo h2 {
+    font-size: 16px;
+    line-height: 1.15;
+}
+
+
+/* FEATURE 1: Navigation */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 13px 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 14px;
+    transition: .2s;
+}
+
+nav a:hover {
+    background: var(--card-hover);
+    color: var(--text);
+}
+
+nav a.active {
+    background: #1a1710;
+    color: var(--accent-light);
+    border: 1px solid #332812;
+}
+
+
+/* FEATURE 1: Sidebar user section */
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.user-card {
+    border: 1px solid var(--border);
+    background: var(--card);
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #24242c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+}
+
+.user-card p {
+    font-size: 12px;
+}
+
+.user-card span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* =========================================
+   FEATURE 1: MAIN CONTENT
+   ========================================= */
+
+.main {
+    flex: 1;
+    padding: 32px 45px;
+    max-width: 1500px;
+    margin: auto;
+}
+
+
+/* FEATURE 1: Topbar */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.small-text {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
+.topbar h1 {
+    font-size: 25px;
+}
+
+
+/* FEATURE 1: Connect button */
+
+.connect-btn {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 10px 16px;
+    border-radius: 7px;
+    transition: .2s;
+}
+
+.connect-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent-light);
+}
+
+
+/* =========================================
+   FEATURE 1: HERO SECTION
+   ========================================= */
+
+.hero {
+    min-height: 270px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: linear-gradient(120deg,#131316,#0e0e11);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.tag {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.hero p:not(.tag) {
+    color: var(--muted);
+    max-width: 520px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+
+/* FEATURE 1: Hero button */
+
+.primary-btn {
+    margin-top: 24px;
+    background: var(--accent);
+    border: none;
+    padding: 11px 18px;
+    border-radius: 7px;
+    font-weight: 600;
+    color: #111;
+}
+
+.primary-btn:hover {
+    background: var(--accent-light);
+}
+
+
+/* =========================================
+   FEATURE 1: CODE WINDOW
+   ========================================= */
+
+.hero-code {
+    width: 350px;
+    background: #08080a;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+.code-top {
+    height: 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 12px;
+}
+
+.code-top span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #3b3b42;
+}
+
+.hero-code pre {
+    padding: 24px;
+    color: #a1a1aa;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   FEATURE 1: STATISTICS
+   ========================================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 14px;
+    margin-bottom: 38px;
+}
+
+.stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.stat-icon {
+    width: 38px;
+    height: 38px;
+    background: #19191f;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-card span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.stat-card h3 {
+    margin-top: 5px;
+    font-size: 22px;
+}
+
+
+/* =========================================
+   FEATURE 1: SECTIONS
+   ========================================= */
+
+.section {
+    margin-bottom: 38px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    font-size: 19px;
+}
+
+
+/* FEATURE 1: View all button */
+
+.view-btn {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.view-btn:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================
+   FEATURE 1: COLLECTION CARDS
+   ========================================= */
+
+.collections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.collection-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 22px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.collection-card:hover {
+    background: var(--card-hover);
+    transform: translateY(-2px);
+}
+
+.collection-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 9px;
+    background: #1c1b18;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collection-card h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.collection-card p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.arrow {
+    margin-left: auto;
+    color: var(--muted);
+}
+
+
+/* =========================================
+   FEATURE 1: EMPTY STATE
+   ========================================= */
+
+.empty-state {
+    border: 1px dashed var(--border);
+    border-radius: 11px;
+    padding: 45px;
+    text-align: center;
+}
+
+.empty-icon {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.empty-state h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.empty-state p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* =========================================
+   FEATURE 1: RESPONSIVE DESIGN
+   ========================================= */
+
+@media(max-width:1000px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main {
+        padding: 25px;
+    }
+
+    .hero-code {
+        display: none;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        padding: 20px 15px;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .collections {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar h1 {
+        font-size: 20px;
+    }
+}
+
