@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CodeChef Contest Tracker</title>
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         HEADER
+    ================================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-content">
+
+            <div class="logo">
+                CodeChef Contest Tracker
+            </div>
+
+
+            <nav class="nav-links">
+
+                <button
+                    id="startersTab"
+                    class="nav-tab active"
+                >
+                    Starters
+                </button>
+
+
+                <button
+                    id="mondayMunchTab"
+                    class="nav-tab"
+                >
+                    DSA Monday Munch
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         MAIN
+    ================================================== -->
+
+    <main>
+
+
+        <!-- ==================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="container">
+
+                <p class="hero-label">
+                    CODECHEF
+                </p>
+
+                <h1>
+                    Contest Tracker
+                </h1>
+
+                <p class="hero-description">
+                    Track CodeChef contests, problems,
+                    difficulty ratings and editorials.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             STARTERS SECTION
+        ================================================== -->
+
+        <section
+            id="startersSection"
+            class="content-section"
+        >
+
+            <div class="container">
+
+
+                <!-- ==========================================
+                     DIVISION BUTTONS
+                =========================================== -->
+
+                <div class="division-tabs">
+
+                    <button
+                        class="division-btn active"
+                        data-division="div_1"
+                    >
+                        Div. 1
+                    </button>
+
+
+                    <button
+                        class="division-btn"
+                        data-division="div_2"
+                    >
+                        Div. 2
+                    </button>
+
+
+                    <button
+                        class="division-btn"
+                        data-division="div_3"
+                    >
+                        Div. 3
+                    </button>
+
+
+                    <button
+                        class="division-btn"
+                        data-division="div_4"
+                    >
+                        Div. 4
+                    </button>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     SEARCH + DIFFICULTY FILTER
+                =========================================== -->
+
+                <div class="filters">
+
+
+                    <!-- Search Contest -->
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search contest..."
+                    >
+
+
+                    <!-- Difficulty From -->
+
+                    <input
+                        type="number"
+                        id="difficultyFrom"
+                        placeholder="Difficulty from"
+                        min="0"
+                    >
+
+
+                    <!-- Difficulty To -->
+
+                    <input
+                        type="number"
+                        id="difficultyTo"
+                        placeholder="Difficulty to"
+                        min="0"
+                    >
+
+
+                    <!-- Clear Filters -->
+
+                    <button
+                        id="clearFilters"
+                        class="clear-filters-btn"
+                    >
+                        Clear
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     LOADING
+                =========================================== -->
+
+                <div
+                    id="loading"
+                    class="loading"
+                >
+                    Loading Starters...
+                </div>
+
+
+
+                <!-- ==========================================
+                     ERROR
+                =========================================== -->
+
+                <div
+                    id="errorMessage"
+                    class="error"
+                    style="display: none;"
+                >
+                    Failed to load Starters.
+                </div>
+
+
+
+                <!-- ==========================================
+                     CONTEST LIST
+                =========================================== -->
+
+                <div
+                    id="contestList"
+                    class="contest-list"
+                >
+
+                    <!-- JavaScript inserts contests here -->
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             DSA MONDAY MUNCH SECTION
+        ================================================== -->
+
+        <section
+            id="mondayMunchSection"
+            class="content-section"
+            style="display: none;"
+        >
+
+            <div class="container">
+
+
+                <!-- ==========================================
+                     SECTION HEADING
+                =========================================== -->
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        DSA
+                    </p>
+
+                    <h2>
+                        Monday Munch
+                    </h2>
+
+                    <p>
+                        Practice challenges from the
+                        CodeChef DSA Monday Munch series.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     MONDAY MUNCH LIST
+                =========================================== -->
+
+                <div
+                    id="mondayMunchList"
+                    class="contest-list"
+                >
+
+                    <!-- JavaScript inserts challenges here -->
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                CodeChef Contest Tracker
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

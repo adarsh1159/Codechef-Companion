@@ -1,0 +1,854 @@
+/* ============================================
+   RESET
+============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ============================================
+   ROOT
+============================================ */
+
+:root {
+    --bg: #f5f7fb;
+    --surface: #ffffff;
+    --surface-hover: #f8fafc;
+
+    --text: #1e293b;
+    --muted: #64748b;
+
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+
+    --border: #e2e8f0;
+
+    --success: #16a34a;
+    --warning: #d97706;
+    --danger: #dc2626;
+
+    --shadow:
+        0 4px 20px
+        rgba(15, 23, 42, 0.08);
+}
+
+
+/* ============================================
+   BODY
+============================================ */
+
+body {
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    line-height: 1.5;
+}
+
+
+/* ============================================
+   CONTAINER
+============================================ */
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+
+/* ============================================
+   NAVBAR
+============================================ */
+
+.navbar {
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    backdrop-filter:
+        blur(12px);
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.navbar-content {
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.logo {
+    font-size: 1.2rem;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+    letter-spacing: -0.5px;
+}
+
+
+/* ============================================
+   NAVIGATION
+============================================ */
+
+.nav-links {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.nav-tab {
+    border: none;
+
+    background: transparent;
+
+    color: var(--muted);
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        0.2s ease;
+}
+
+
+.nav-tab:hover {
+    background: #eef2ff;
+
+    color: var(--primary);
+}
+
+
+.nav-tab.active {
+    background: var(--primary);
+
+    color: white;
+}
+
+
+/* ============================================
+   HERO
+============================================ */
+
+.hero {
+    padding:
+        80px 0
+        60px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #f8fafc
+        );
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.hero-label,
+.section-label {
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    color: var(--primary);
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+}
+
+
+.hero h1 {
+    font-size:
+        clamp(
+            2.5rem,
+            6vw,
+            4.5rem
+        );
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero-description {
+    color: var(--muted);
+
+    font-size: 1.1rem;
+
+    max-width: 600px;
+}
+
+
+/* ============================================
+   CONTENT
+============================================ */
+
+.content-section {
+    padding:
+        45px 0
+        70px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* ============================================
+   SECTION HEADING
+============================================ */
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+
+.section-heading h2 {
+    font-size: 2rem;
+
+    margin-bottom: 8px;
+}
+
+
+.section-heading p {
+    color: var(--muted);
+}
+
+
+/* ============================================
+   FILTERS
+============================================ */
+
+.filters {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 28px;
+
+    padding: 18px;
+
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.filter-input {
+    flex: 1;
+
+    min-width: 180px;
+
+    padding: 11px 14px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+
+    outline: none;
+
+    transition:
+        0.2s ease;
+}
+
+
+.filter-input:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.1);
+}
+
+
+.clear-btn {
+    padding:
+        10px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #e2e8f0;
+
+    color: var(--text);
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        0.2s ease;
+}
+
+
+.clear-btn:hover {
+    background: #cbd5e1;
+}
+
+
+/* ============================================
+   DIVISION TABS
+============================================ */
+
+.division-tabs {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 28px;
+}
+
+
+.division-btn {
+    padding:
+        10px 18px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: var(--muted);
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        0.2s ease;
+}
+
+
+.division-btn:hover {
+    border-color: var(--primary);
+
+    color: var(--primary);
+}
+
+
+.division-btn.active {
+    background: var(--text);
+
+    color: white;
+
+    border-color: var(--text);
+}
+
+
+/* ============================================
+   CONTEST LIST
+============================================ */
+
+.contest-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+/* ============================================
+   CONTEST CARD
+============================================ */
+
+.contest-card {
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.contest-card:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(15, 23, 42, 0.12);
+}
+
+
+/* ============================================
+   CONTEST HEADER
+============================================ */
+
+.contest-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        20px 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f8fafc
+        );
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.contest-header h3 {
+    font-size: 1.2rem;
+
+    font-weight: 750;
+
+    letter-spacing: -0.3px;
+}
+
+
+.contest-header p {
+    color: var(--muted);
+
+    font-size: 0.85rem;
+
+    margin-top: 3px;
+}
+
+
+.contest-tag {
+    background: #dbeafe;
+
+    color: var(--primary);
+
+    padding:
+        6px 12px;
+
+    border-radius: 999px;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+}
+
+
+/* ============================================
+   PROBLEM TABLE
+============================================ */
+
+.problem-table {
+    width: 100%;
+}
+
+
+.problem-row {
+    display: grid;
+
+    grid-template-columns:
+        60px
+        minmax(200px, 1fr)
+        110px
+        100px
+        110px;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+        15px 24px;
+
+    border-bottom:
+        1px solid #f1f5f9;
+
+    transition:
+        background 0.15s ease;
+}
+
+
+.problem-row:hover {
+    background: var(--surface-hover);
+}
+
+
+.problem-row:last-child {
+    border-bottom: none;
+}
+
+
+/* ============================================
+   TABLE HEADING
+============================================ */
+
+.problem-heading {
+    background: #f8fafc;
+
+    color: var(--muted);
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+
+.problem-heading:hover {
+    background: #f8fafc;
+}
+
+
+/* ============================================
+   PROBLEM NAME
+============================================ */
+
+.problem-name {
+    font-weight: 600;
+
+    color: var(--text);
+}
+
+
+/* ============================================
+   DIFFICULTY BADGES
+============================================ */
+
+.difficulty {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 62px;
+
+    padding:
+        5px 10px;
+
+    border-radius: 999px;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+}
+
+
+.difficulty-easy {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+
+.difficulty-medium {
+    background: #fef3c7;
+
+    color: #b45309;
+}
+
+
+.difficulty-hard {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+
+.difficulty-very-hard {
+    background: #f3e8ff;
+
+    color: #9333ea;
+}
+
+
+.difficulty-unknown {
+    background: #e2e8f0;
+
+    color: #64748b;
+}
+
+
+/* ============================================
+   BUTTONS
+============================================ */
+
+.solve-btn,
+.editorial-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    padding:
+        8px 13px;
+
+    border-radius: 7px;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    transition:
+        0.2s ease;
+}
+
+
+.solve-btn {
+    background: var(--primary);
+
+    color: white;
+}
+
+
+.solve-btn:hover {
+    background: var(--primary-hover);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.editorial-btn {
+    background: #f1f5f9;
+
+    color: var(--text);
+}
+
+
+.editorial-btn:hover {
+    background: #e2e8f0;
+}
+
+
+/* ============================================
+   LOADING / EMPTY / ERROR
+============================================ */
+
+.loading,
+.empty-message,
+.error {
+    padding: 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 12px;
+
+    color: var(--muted);
+}
+
+
+.error {
+    color: var(--danger);
+
+    background: #fef2f2;
+
+    border-color: #fecaca;
+}
+
+
+/* ============================================
+   FOOTER
+============================================ */
+
+footer {
+    padding: 30px 0;
+
+    border-top:
+        1px solid var(--border);
+
+    background: white;
+
+    color: var(--muted);
+
+    text-align: center;
+
+    font-size: 0.9rem;
+}
+
+
+/* ============================================
+   RESPONSIVE TABLET
+============================================ */
+
+@media (max-width: 800px) {
+
+    .navbar-content {
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding:
+            15px 0;
+    }
+
+
+    .hero {
+        padding:
+            60px 0
+            45px;
+    }
+
+
+    .problem-row {
+        grid-template-columns:
+            45px
+            minmax(140px, 1fr)
+            90px
+            80px
+            90px;
+
+        gap: 8px;
+
+        padding:
+            14px;
+    }
+
+}
+
+
+/* ============================================
+   MOBILE
+============================================ */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+    }
+
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .nav-tab {
+        flex: 1;
+    }
+
+
+    .filters {
+        flex-direction: column;
+    }
+
+
+    .filter-input,
+    .clear-btn {
+        width: 100%;
+    }
+
+
+    .division-tabs {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .division-btn {
+        width: 100%;
+    }
+
+
+    .problem-table {
+        overflow-x: auto;
+    }
+
+
+    .problem-row {
+        min-width: 650px;
+    }
+
+
+    .contest-header {
+        padding: 18px;
+    }
+
+
+    .contest-card {
+        border-radius: 12px;
+    }
+
+}

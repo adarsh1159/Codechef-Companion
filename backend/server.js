@@ -1,699 +1,343 @@
 const express = require("express");
-const axios = require("axios");
+const cors = require("cors");
+const fs = require("fs");
+const path = require("path");
 
 const app = express();
-
 const PORT = 5000;
 
+app.use(cors());
 app.use(express.json());
 
 
-// --------------------------------------------------
-// Health Check
-// --------------------------------------------------
+// ============================================
+// DATA FILES
+// ============================================
 
-app.get("/", (req, res) => {
+const startersFile =
+    path.join(
+        __dirname,
+        "data",
+        "starters.json"
+    );
 
-    res.json({
-        message: "CodeChef Tracker Backend is running"
-    });
+const mondayMunchFile =
+    path.join(
+        __dirname,
+        "data",
+        "monday-munch.json"
+    );
 
-});
 
+// ============================================
+// LOAD STARTERS DATA
+// ============================================
 
-// --------------------------------------------------
-// Get Starters + DSA Monday Munch contests
-// --------------------------------------------------
-
-app.get("/api/contests", async (req, res) => {
+function loadStarters() {
 
     try {
 
-        const response = await axios.get(
-            "https://www.codechef.com/api/list/contests/all"
-        );
+        const file =
+            fs.readFileSync(
+                startersFile,
+                "utf8"
+            );
 
-        const data = response.data;
-
-        let allContests = [];
-
-        if (data.present_contests) {
-            allContests.push(...data.present_contests);
-        }
-
-        if (data.future_contests) {
-            allContests.push(...data.future_contests);
-        }
-
-        if (data.past_contests) {
-            allContests.push(...data.past_contests);
-        }
-
-
-        const contests = allContests
-            .filter((contest) => {
-
-                const name =
-                    contest.contest_name ||
-                    contest.contestname ||
-                    "";
-
-                const code =
-                    contest.contest_code ||
-                    contest.contestCode ||
-                    "";
-
-                return (
-                    name.toLowerCase().includes("starters") ||
-                    name.toLowerCase().includes("monday munch") ||
-                    code.startsWith("START") ||
-                    code.startsWith("DSAMONDAY")
-                );
-
-            })
-            .map((contest) => {
-
-                const code =
-                    contest.contest_code ||
-                    contest.contestCode;
-
-                const name =
-                    contest.contest_name ||
-                    contest.contestname;
-
-                const startDate =
-                    contest.contest_start_date_iso ||
-                    contest.conteststartdate_iso ||
-                    null;
-
-                const endDate =
-                    contest.contest_end_date_iso ||
-                    contest.contestenddate_iso ||
-                    null;
-
-                let type = "Other";
-
-                if (
-                    name &&
-                    name.toLowerCase().includes("starters")
-                ) {
-                    type = "Starters";
-                }
-
-                if (
-                    name &&
-                    name.toLowerCase().includes("monday munch")
-                ) {
-                    type = "DSA Monday Munch";
-                }
-
-                return {
-                    code,
-                    name,
-                    type,
-                    startDate,
-                    endDate
-                };
-
-            });
-
-
-        const uniqueContests = Array.from(
-            new Map(
-                contests.map((contest) => [
-                    contest.code,
-                    contest
-                ])
-            ).values()
-        );
-
-
-        uniqueContests.sort(
-            (a, b) =>
-                new Date(b.startDate || 0) -
-                new Date(a.startDate || 0)
-        );
-
-
-        res.json({
-
-            success: true,
-
-            count: uniqueContests.length,
-
-            contests: uniqueContests
-
-        });
+        return JSON.parse(file);
 
     } catch (error) {
 
         console.error(
-            "Error fetching contests:",
+            "Failed to read starters.json:",
             error.message
         );
 
-        res.status(500).json({
-
-            success: false,
-
-            message:
-                "Failed to fetch CodeChef contests"
-
-        });
-
+        return null;
     }
-
-});
-
-
-// --------------------------------------------------
-// Get divisions of a contest
-// --------------------------------------------------
-
-app.get("/api/contests/:contestCode", async (req, res) => {
-
-    const { contestCode } = req.params;
+}
 
 
-    if (!/^[A-Za-z0-9_-]+$/.test(contestCode)) {
+// ============================================
+// LOAD MONDAY MUNCH DATA
+// ============================================
 
-        return res.status(400).json({
-
-            success: false,
-
-            message: "Invalid contest code"
-
-        });
-
-    }
-
+function loadMondayMunch() {
 
     try {
 
-        const response = await axios.get(
-            `https://www.codechef.com/api/contests/${contestCode}`
-        );
+        const file =
+            fs.readFileSync(
+                mondayMunchFile,
+                "utf8"
+            );
 
-        const data = response.data;
-
-
-        // ----------------------------------------------
-        // Multi-division contest
-        // ----------------------------------------------
-
-        if (
-            data.child_contests &&
-            Object.keys(data.child_contests).length > 0
-        ) {
-
-            const divisions = Object.keys(
-                data.child_contests
-            ).map((division) => {
-
-                const divisionNumber =
-                    Number(
-                        division.split("_")[1]
-                    );
-
-                const suffix =
-                    String.fromCharCode(
-                        64 + divisionNumber
-                    );
-
-                return {
-
-                    id: division,
-
-                    name:
-                        `Division ${divisionNumber}`,
-
-                    code:
-                        `${contestCode}${suffix}`
-
-                };
-
-            });
-
-
-            return res.json({
-
-                success: true,
-
-                contestCode,
-
-                type: "multi-division",
-
-                count: divisions.length,
-
-                divisions
-
-            });
-
-        }
-
-
-        // ----------------------------------------------
-        // Single division contest
-        // ----------------------------------------------
-
-        return res.json({
-
-            success: true,
-
-            contestCode,
-
-            type: "single-division",
-
-            divisions: []
-
-        });
+        return JSON.parse(file);
 
     } catch (error) {
 
         console.error(
-            `Error fetching contest ${contestCode}:`,
+            "Failed to read monday-munch.json:",
             error.message
         );
 
-        res.status(500).json({
-
-            success: false,
-
-            message:
-                `Failed to fetch contest ${contestCode}`
-
-        });
-
+        return null;
     }
+}
 
-});
 
-
-// --------------------------------------------------
-// Get problems for a Starters division
-// --------------------------------------------------
+// ============================================
+// GET ALL STARTER CONTESTS
+// ============================================
 
 app.get(
-    "/api/contests/:contestCode/:division/problems",
-    async (req, res) => {
+    "/api/contests",
+    (req, res) => {
 
-        const {
-            contestCode,
-            division
-        } = req.params;
+        const data =
+            loadStarters();
 
+        if (!data) {
 
-        if (
-            !/^[A-Za-z0-9_-]+$/.test(contestCode) ||
-            !/^div_[1-4]$/.test(division)
-        ) {
-
-            return res.status(400).json({
-
+            return res.status(500).json({
                 success: false,
-
                 message:
-                    "Invalid contest code or division"
-
+                    "Could not load starters data"
             });
-
         }
 
-
-        try {
-
-            // ------------------------------------------
-            // This endpoint is for Starters divisions
-            // ------------------------------------------
-
-            if (
-                !contestCode
-                    .toUpperCase()
-                    .startsWith("START")
-            ) {
-
-                return res.status(400).json({
-
-                    success: false,
-
-                    message:
-                        "This endpoint is only for Starters divisions"
-
-                });
-
-            }
-
-
-            const divisionNumber =
-                Number(
-                    division.split("_")[1]
-                );
-
-            const suffix =
-                String.fromCharCode(
-                    64 + divisionNumber
-                );
-
-            const actualContestCode =
-                `${contestCode}${suffix}`;
-
-
-            console.log(
-                `Fetching problems for ${actualContestCode}`
+        const contests =
+            Object.values(
+                data.contests || {}
             );
 
-
-            const response = await axios.get(
-                `https://www.codechef.com/api/contests/${actualContestCode}`
-            );
-
-            const data = response.data;
-
-
-            if (!data.problems) {
-
-                return res.json({
-
-                    success: true,
-
-                    contestCode,
-
-                    division,
-
-                    actualContestCode,
-
-                    count: 0,
-
-                    problems: []
-
-                });
-
-            }
-
-
-            // ------------------------------------------
-            // Get problem information
-            // ------------------------------------------
-
-            const problems = Object.values(
-                data.problems
-            )
-            .filter((problem) => {
-
-                return (
-                    problem.category_name === "main"
-                );
-
-            })
-            .map((problem) => {
-
-                return {
-
-                    code:
-                        problem.code,
-
-                    name:
-                        problem.name,
-
-                    successfulSubmissions:
-                        problem.successful_submissions,
-
-                    accuracy:
-                        problem.accuracy,
-
-                    problemUrl:
-                        problem.problem_url
-
-                };
-
-            });
-
-
-            // ------------------------------------------
-            // Fetch difficulty
-            // ------------------------------------------
-
-            const problemsWithDifficulty =
-                await Promise.all(
-
-                    problems.map(async (problem) => {
-
-                        try {
-
-                            const difficultyResponse =
-                                await axios.get(
-                                    `https://www.codechef.com/api/contests/PRACTICE/problems/${problem.code}`
-                                );
-
-
-                            const difficultyData =
-                                difficultyResponse.data;
-
-
-                            return {
-
-                                ...problem,
-
-                                difficulty:
-                                    difficultyData
-                                        .difficulty_rating ||
-                                    null
-
-                            };
-
-                        } catch (error) {
-
-                            console.log(
-                                `Difficulty not found for ${problem.code}`
-                            );
-
-                            return {
-
-                                ...problem,
-
-                                difficulty: null
-
-                            };
-
-                        }
-
-                    })
-
-                );
-
-
-            // ------------------------------------------
-            // Add editorial link
-            // ------------------------------------------
-
-            const finalProblems =
-                problemsWithDifficulty.map(
-                    (problem) => {
-
-                        return {
-
-                            ...problem,
-
-                            editorialUrl:
-                                `https://discuss.codechef.com/t/${problem.code.toLowerCase()}-editorial/`
-
-                        };
-
-                    }
-                );
-
-
-            res.json({
-
-                success: true,
-
-                contestCode,
-
-                division,
-
-                actualContestCode,
-
-                count: finalProblems.length,
-
-                problems: finalProblems
-
-            });
-
-        } catch (error) {
-
-            console.error(
-
-                `Error fetching problems for ${contestCode} ${division}:`,
-
-                error.message
-
-            );
-
-
-            res.status(500).json({
-
-                success: false,
-
-                message:
-                    "Failed to fetch problems"
-
-            });
-
-        }
-
+        res.json({
+            success: true,
+            count:
+                contests.length,
+            contests
+        });
     }
 );
 
 
-// --------------------------------------------------
-// Get all Monday Munch challenges
-// --------------------------------------------------
+// ============================================
+// GET ONE STARTER CONTEST
+// ============================================
 
-app.get("/api/monday-munch", async (req, res) => {
+app.get(
+    "/api/contests/:contestCode",
+    (req, res) => {
 
-    try {
+        const contestCode =
+            req.params.contestCode.toUpperCase();
 
-        const response = await axios.get(
-            "https://www.codechef.com/api/practice/syllabus/dsa-challenges?roadmapSlug="
-        );
+        const data =
+            loadStarters();
 
-        const data = response.data;
-
-
-        if (
-            data.status !== "success" ||
-            !data.modules
-        ) {
+        if (!data) {
 
             return res.status(500).json({
-
                 success: false,
-
                 message:
-                    "Failed to fetch Monday Munch data"
-
+                    "Could not load starters data"
             });
-
         }
 
+        const contest =
+            data.contests?.[contestCode];
 
-        const challenges = [];
+        if (!contest) {
 
-
-        // ------------------------------------------
-        // Extract every challenge
-        // ------------------------------------------
-
-        for (const module of data.modules) {
-
-            if (
-                !module.submodules ||
-                !Array.isArray(module.submodules)
-            ) {
-                continue;
-            }
-
-
-            for (const submodule of module.submodules) {
-
-                const problems =
-                    (
-                        submodule.problems_with_status ||
-                        []
-                    ).map((problem) => {
-
-                        const difficultyRating =
-                            Number(
-                                problem.difficulty_rating
-                            );
-
-
-                        return {
-
-                            code:
-                                problem.code,
-
-                            name:
-                                problem.name,
-
-                            difficulty:
-                                difficultyRating === -1
-                                    ? null
-                                    : difficultyRating,
-
-                            difficultyType:
-                                problem.difficulty_type,
-
-                            problemUrl:
-                                `https://www.codechef.com/problems/${problem.code}`
-
-                        };
-
-                    });
-
-
-                challenges.push({
-
-                    name:
-                        submodule.name,
-
-                    contestCode:
-                        submodule.contest_code,
-
-                    startDate:
-                        submodule.start_date,
-
-                    totalProblems:
-                        submodule.total_problems,
-
-                    problems
-
-                });
-
-            }
-
+            return res.status(404).json({
+                success: false,
+                message:
+                    "Contest not found"
+            });
         }
 
+        const divisions =
+            Object.entries(
+                contest.divisions || {}
+            ).map(
+                ([id, division]) => {
+
+                    return {
+                        id,
+
+                        name:
+                            division.division,
+
+                        code:
+                            division.contestTag
+                    };
+                }
+            );
+
+        res.json({
+            success: true,
+            contestCode,
+            count:
+                divisions.length,
+            divisions
+        });
+    }
+);
+
+
+// ============================================
+// GET PROBLEMS OF A DIVISION
+// ============================================
+
+app.get(
+    "/api/contests/:contestCode/:division/problems",
+    (req, res) => {
+
+        const contestCode =
+            req.params.contestCode.toUpperCase();
+
+        const division =
+            req.params.division;
+
+        const data =
+            loadStarters();
+
+        if (!data) {
+
+            return res.status(500).json({
+                success: false,
+                message:
+                    "Could not load starters data"
+            });
+        }
+
+        const contest =
+            data.contests?.[contestCode];
+
+        if (!contest) {
+
+            return res.status(404).json({
+                success: false,
+                message:
+                    "Contest not found"
+            });
+        }
+
+        const divisionData =
+            contest.divisions?.[division];
+
+        if (!divisionData) {
+
+            return res.status(404).json({
+                success: false,
+                message:
+                    "Division not found"
+            });
+        }
+
+        const problems =
+            divisionData.problems || [];
 
         res.json({
 
             success: true,
 
-            count: challenges.length,
+            contestCode,
 
-            challenges
+            division,
 
+            contestTag:
+                divisionData.contestTag,
+
+            count:
+                problems.length,
+
+            problems
         });
+    }
+);
 
-    } catch (error) {
 
-        console.error(
-            "Error fetching Monday Munch:",
-            error.message
-        );
+// ============================================
+// GET MONDAY MUNCH
+// ============================================
 
-        res.status(500).json({
+app.get(
+    "/api/monday-munch",
+    (req, res) => {
 
-            success: false,
+        const data =
+            loadMondayMunch();
+
+        if (!data) {
+
+            return res.status(500).json({
+                success: false,
+                message:
+                    "Could not load Monday Munch data"
+            });
+        }
+
+        res.json({
+            success: true,
+
+            count:
+                data.count || 0,
+
+            challenges:
+                data.challenges || []
+        });
+    }
+);
+
+
+// ============================================
+// ROOT ROUTE
+// ============================================
+
+app.get(
+    "/",
+    (req, res) => {
+
+        res.json({
+            success: true,
 
             message:
-                "Failed to fetch Monday Munch challenges"
-
+                "CodeChef Companion backend is running"
         });
-
     }
+);
 
-});
 
+// ============================================
+// START SERVER
+// ============================================
 
-// --------------------------------------------------
-// Start Server
-// --------------------------------------------------
+app.listen(
+    PORT,
+    () => {
 
-app.listen(PORT, () => {
+        console.log("");
 
-    console.log(
-        `Server running at http://localhost:${PORT}`
-    );
+        console.log(
+            "===================================="
+        );
 
-});
+        console.log(
+            "CodeChef Companion Backend"
+        );
+
+        console.log(
+            `Server running on http://localhost:${PORT}`
+        );
+
+        console.log(
+            "Using local JSON data"
+        );
+
+        console.log(
+            "===================================="
+        );
+
+        console.log("");
+    }
+);

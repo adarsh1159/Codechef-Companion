@@ -1,0 +1,1546 @@
+{
+    "updatedAt": "2026-09-03T21:04:05.200Z",
+    "count": 35,
+    "challenges": [
+        {
+            "name": "Monday Munch - DSA Challenge 01",
+            "contestCode": "DSAMONDAY01P",
+            "startDate": "2025-09-04 15:45:03",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "SEARCHINARR",
+                    "name": "Search an element in an array",
+                    "difficulty": 600,
+                    "problemUrl": "https://www.codechef.com/problems/SEARCHINARR"
+                },
+                {
+                    "code": "MERGESORTED",
+                    "name": "Merge two sorted arrays",
+                    "difficulty": 1050,
+                    "problemUrl": "https://www.codechef.com/problems/MERGESORTED"
+                },
+                {
+                    "code": "DSCPPAS276",
+                    "name": "Check Palindrome",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/DSCPPAS276"
+                },
+                {
+                    "code": "SLDW0102",
+                    "name": "Maximum Sum of K Elements",
+                    "difficulty": 932,
+                    "problemUrl": "https://www.codechef.com/problems/SLDW0102"
+                },
+                {
+                    "code": "BTZIGZAG",
+                    "name": "ZigZag Traversal",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/BTZIGZAG"
+                },
+                {
+                    "code": "TREEDIAMETER",
+                    "name": "Diameter of the tree",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/TREEDIAMETER"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA challenge 02",
+            "contestCode": "DSAMONDAY02P",
+            "startDate": "2025-09-09 08:44:45",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "BITMEDU5",
+                    "name": "Count of set bits",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/BITMEDU5"
+                },
+                {
+                    "code": "PREP58",
+                    "name": "Cycle in a linked list",
+                    "difficulty": 1100,
+                    "problemUrl": "https://www.codechef.com/problems/PREP58"
+                },
+                {
+                    "code": "LINK02P09",
+                    "name": "Practice - Josephus Problem",
+                    "difficulty": 1200,
+                    "problemUrl": "https://www.codechef.com/problems/LINK02P09"
+                },
+                {
+                    "code": "DSAPROB18",
+                    "name": "Chef Square Tile Problem",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/DSAPROB18"
+                },
+                {
+                    "code": "BSEX01",
+                    "name": "Search in a 2D Matrix",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/BSEX01"
+                },
+                {
+                    "code": "DIVNUMB",
+                    "name": "Good Numbers",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/DIVNUMB"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 03",
+            "contestCode": "DSAMONDAY03P",
+            "startDate": "2025-09-16 09:50:11",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "UWCOI20A",
+                    "name": "Find maximum in an Array",
+                    "difficulty": 650,
+                    "problemUrl": "https://www.codechef.com/problems/UWCOI20A"
+                },
+                {
+                    "code": "HEAPEDU3",
+                    "name": "Insertion and deletion together in a Heap",
+                    "difficulty": 400,
+                    "problemUrl": "https://www.codechef.com/problems/HEAPEDU3"
+                },
+                {
+                    "code": "SUBINC",
+                    "name": "Count Subarrays",
+                    "difficulty": 1478,
+                    "problemUrl": "https://www.codechef.com/problems/SUBINC"
+                },
+                {
+                    "code": "TOPOSORTCS",
+                    "name": "Find Course Schedule",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/TOPOSORTCS"
+                },
+                {
+                    "code": "RKS",
+                    "name": "Rooks",
+                    "difficulty": 1624,
+                    "problemUrl": "https://www.codechef.com/problems/RKS"
+                },
+                {
+                    "code": "SEGFAULT",
+                    "name": "Segmentation Fault",
+                    "difficulty": 1815,
+                    "problemUrl": "https://www.codechef.com/problems/SEGFAULT"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 04",
+            "contestCode": "DSAMONDAY04P",
+            "startDate": "2025-09-23 06:50:38",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "REMAINDER10",
+                    "name": "Find Remainder ",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/REMAINDER10"
+                },
+                {
+                    "code": "APPLESORANGE",
+                    "name": "Apples and oranges",
+                    "difficulty": 1040,
+                    "problemUrl": "https://www.codechef.com/problems/APPLESORANGE"
+                },
+                {
+                    "code": "ARRAYSORTED",
+                    "name": "Check if the array is sorted",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/ARRAYSORTED"
+                },
+                {
+                    "code": "BITMEDU4",
+                    "name": "Least significant bit, and most significant bit",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/BITMEDU4"
+                },
+                {
+                    "code": "MIRRORTREE",
+                    "name": "Mirror Tree",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MIRRORTREE"
+                },
+                {
+                    "code": "GALACTICNW",
+                    "name": "Galactic Network",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/GALACTICNW"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 05",
+            "contestCode": "DSAMONDAY05P",
+            "startDate": "2025-09-29 21:47:22",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "VOWELORNOT",
+                    "name": "Vowels or Not",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/VOWELORNOT"
+                },
+                {
+                    "code": "DSAPROB20",
+                    "name": "Largest Common Element in Two Arrays",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/DSAPROB20"
+                },
+                {
+                    "code": "COUNTSUBARAY",
+                    "name": "Count subarrays with given sum",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/COUNTSUBARAY"
+                },
+                {
+                    "code": "MAXSC",
+                    "name": "Maximum Score",
+                    "difficulty": 1561,
+                    "problemUrl": "https://www.codechef.com/problems/MAXSC"
+                },
+                {
+                    "code": "MERGEINTER",
+                    "name": "Merge Overlapping intervals",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MERGEINTER"
+                },
+                {
+                    "code": "COUNTPAL",
+                    "name": "Count palindromes",
+                    "difficulty": 1631,
+                    "problemUrl": "https://www.codechef.com/problems/COUNTPAL"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 06",
+            "contestCode": "DSAMONDAY06P",
+            "startDate": "2025-10-06 21:41:32",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "GRADETHEMARK",
+                    "name": "What is your grade",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/GRADETHEMARK"
+                },
+                {
+                    "code": "SINGLENUM",
+                    "name": "Single number in multiple numbers",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/SINGLENUM"
+                },
+                {
+                    "code": "LINKLP",
+                    "name": "Count loop length in Linked List",
+                    "difficulty": 1300,
+                    "problemUrl": "https://www.codechef.com/problems/LINKLP"
+                },
+                {
+                    "code": "STRANGELIST",
+                    "name": "Flatten a Linked List",
+                    "difficulty": 1600,
+                    "problemUrl": "https://www.codechef.com/problems/STRANGELIST"
+                },
+                {
+                    "code": "BSTKTHMAX",
+                    "name": "Kth Largest Node in BST",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/BSTKTHMAX"
+                },
+                {
+                    "code": "HASHP02",
+                    "name": "Length of Longest Palindrome",
+                    "difficulty": 1696,
+                    "problemUrl": "https://www.codechef.com/problems/HASHP02"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 07",
+            "contestCode": "DSAMONDAY07P",
+            "startDate": "2025-10-13 21:16:31",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "CENTURY",
+                    "name": "Is that a century",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CENTURY"
+                },
+                {
+                    "code": "DISCOUNTT",
+                    "name": "Take discount or Not",
+                    "difficulty": 700,
+                    "problemUrl": "https://www.codechef.com/problems/DISCOUNTT"
+                },
+                {
+                    "code": "SPIRALMATRIX",
+                    "name": "Spiral Matrix Traversal",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/SPIRALMATRIX"
+                },
+                {
+                    "code": "KTHMISSING",
+                    "name": "Kth missing positive",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/KTHMISSING"
+                },
+                {
+                    "code": "EXPSTP",
+                    "name": "Expensive Steps ",
+                    "difficulty": 1310,
+                    "problemUrl": "https://www.codechef.com/problems/EXPSTP"
+                },
+                {
+                    "code": "BINARYSUB",
+                    "name": "Binary Substituition",
+                    "difficulty": 1630,
+                    "problemUrl": "https://www.codechef.com/problems/BINARYSUB"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 08",
+            "contestCode": "DSAMONDAY08P",
+            "startDate": "2025-10-21 10:03:44",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "ODDOREVEN",
+                    "name": "Odd or even",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/ODDOREVEN"
+                },
+                {
+                    "code": "OPMIN",
+                    "name": "MIN To MAX",
+                    "difficulty": 838,
+                    "problemUrl": "https://www.codechef.com/problems/OPMIN"
+                },
+                {
+                    "code": "MATSETZERO",
+                    "name": "Set Matrix Zeroes",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MATSETZERO"
+                },
+                {
+                    "code": "CONSECUTIVE",
+                    "name": "Longest Consecutive Numbers in an Array",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CONSECUTIVE"
+                },
+                {
+                    "code": "KLIP",
+                    "name": "K-Flip",
+                    "difficulty": 1757,
+                    "problemUrl": "https://www.codechef.com/problems/KLIP"
+                },
+                {
+                    "code": "MAXLCS",
+                    "name": "Maximizing LCS",
+                    "difficulty": 1567,
+                    "problemUrl": "https://www.codechef.com/problems/MAXLCS"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 09",
+            "contestCode": "DSAMONDAY09P",
+            "startDate": "2025-10-28 11:18:30",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "DIVISIBLEBY5",
+                    "name": "Is the number divisible by 5",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/DIVISIBLEBY5"
+                },
+                {
+                    "code": "RECUR07",
+                    "name": "Print Pattern",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/RECUR07"
+                },
+                {
+                    "code": "ANDOR",
+                    "name": "AND Plus OR",
+                    "difficulty": 1151,
+                    "problemUrl": "https://www.codechef.com/problems/ANDOR"
+                },
+                {
+                    "code": "SUBARRAYSUM",
+                    "name": "Largest Subarray with Sum 0",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/SUBARRAYSUM"
+                },
+                {
+                    "code": "DSAPROB8",
+                    "name": "Search Word",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/DSAPROB8"
+                },
+                {
+                    "code": "GETANCESTORS",
+                    "name": "Get all ancestors",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/GETANCESTORS"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 10",
+            "contestCode": "DSAMONDAY10P",
+            "startDate": "2025-11-04 11:45:56",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "MINUS100X",
+                    "name": "How much you lack",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MINUS100X"
+                },
+                {
+                    "code": "ODDSUMPAIR",
+                    "name": "Odd Sum Pair",
+                    "difficulty": 506,
+                    "problemUrl": "https://www.codechef.com/problems/ODDSUMPAIR"
+                },
+                {
+                    "code": "BOOKPAGES",
+                    "name": "Divide Pages",
+                    "difficulty": 500,
+                    "problemUrl": "https://www.codechef.com/problems/BOOKPAGES"
+                },
+                {
+                    "code": "PREFPRO3",
+                    "name": "Good subarrays",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/PREFPRO3"
+                },
+                {
+                    "code": "TRIPLETMIN",
+                    "name": "Triplets Min",
+                    "difficulty": 1868,
+                    "problemUrl": "https://www.codechef.com/problems/TRIPLETMIN"
+                },
+                {
+                    "code": "MOVES",
+                    "name": "Robot Movings",
+                    "difficulty": 1668,
+                    "problemUrl": "https://www.codechef.com/problems/MOVES"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 11",
+            "contestCode": "DSAMONDAY11P",
+            "startDate": "2025-11-11 11:21:13",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "SQUAREOFN",
+                    "name": "What is the square",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/SQUAREOFN"
+                },
+                {
+                    "code": "LARGESECOND",
+                    "name": "Largest and Second Largest",
+                    "difficulty": 928,
+                    "problemUrl": "https://www.codechef.com/problems/LARGESECOND"
+                },
+                {
+                    "code": "CNTINVERSION",
+                    "name": "Count Inversions",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CNTINVERSION"
+                },
+                {
+                    "code": "THREESUM",
+                    "name": "Zero Sum Triplets",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/THREESUM"
+                },
+                {
+                    "code": "MAXSEGMP",
+                    "name": "Maximum Unique Segment",
+                    "difficulty": 1791,
+                    "problemUrl": "https://www.codechef.com/problems/MAXSEGMP"
+                },
+                {
+                    "code": "SLDW0104",
+                    "name": "Special Substring",
+                    "difficulty": 1400,
+                    "problemUrl": "https://www.codechef.com/problems/SLDW0104"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 12",
+            "contestCode": "DSAMONDAY12P",
+            "startDate": "2025-11-18 10:18:05",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "MAKE2DIGITS",
+                    "name": "Make 2 digits",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MAKE2DIGITS"
+                },
+                {
+                    "code": "SORTARRAYS",
+                    "name": "Color Sorting Challenge",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/SORTARRAYS"
+                },
+                {
+                    "code": "DSCPPAS261",
+                    "name": "Intersecting arrays",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/DSCPPAS261"
+                },
+                {
+                    "code": "XYSTRPP",
+                    "name": "Chef and String",
+                    "difficulty": 1124,
+                    "problemUrl": "https://www.codechef.com/problems/XYSTRPP"
+                },
+                {
+                    "code": "HXORP",
+                    "name": "Hail XOR",
+                    "difficulty": 1786,
+                    "problemUrl": "https://www.codechef.com/problems/HXORP"
+                },
+                {
+                    "code": "ZCO15003P",
+                    "name": "Covering",
+                    "difficulty": 1700,
+                    "problemUrl": "https://www.codechef.com/problems/ZCO15003P"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 13",
+            "contestCode": "DSAMONDAY13P",
+            "startDate": "2025-11-25 09:09:29",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "LESSTHAN10",
+                    "name": "Less than 10",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/LESSTHAN10"
+                },
+                {
+                    "code": "KITCHENCOST",
+                    "name": "Cost of Groceries",
+                    "difficulty": 799,
+                    "problemUrl": "https://www.codechef.com/problems/KITCHENCOST"
+                },
+                {
+                    "code": "MAXCOUNT",
+                    "name": "Count of Maximum",
+                    "difficulty": 1180,
+                    "problemUrl": "https://www.codechef.com/problems/MAXCOUNT"
+                },
+                {
+                    "code": "DSAPROB7",
+                    "name": "Generate All Possible Pairs of Balanced Parenthese",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/DSAPROB7"
+                },
+                {
+                    "code": "RECUR22",
+                    "name": "All Possible Subsets",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/RECUR22"
+                },
+                {
+                    "code": "BSTRECOVER",
+                    "name": "Recover the BST",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/BSTRECOVER"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 14",
+            "contestCode": "DSAMONDAY14P",
+            "startDate": "2025-12-01 22:54:52",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "RESOLUTIONCP",
+                    "name": "Complete the resolution",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/RESOLUTIONCP"
+                },
+                {
+                    "code": "DNASTORAGEP",
+                    "name": "DNA Storage",
+                    "difficulty": 801,
+                    "problemUrl": "https://www.codechef.com/problems/DNASTORAGEP"
+                },
+                {
+                    "code": "NESTEDPARAN",
+                    "name": "Chef and Nested Parentheses",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/NESTEDPARAN"
+                },
+                {
+                    "code": "REVSEG",
+                    "name": "Reverse the Segment",
+                    "difficulty": 1500,
+                    "problemUrl": "https://www.codechef.com/problems/REVSEG"
+                },
+                {
+                    "code": "DELDOUBLY",
+                    "name": "Delete All Occurrences of a Key in a Doubly Linked",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/DELDOUBLY"
+                },
+                {
+                    "code": "LARGESTYP",
+                    "name": "Largest Y",
+                    "difficulty": 1823,
+                    "problemUrl": "https://www.codechef.com/problems/LARGESTYP"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 15",
+            "contestCode": "DSAMONDAY15P",
+            "startDate": "2025-12-09 09:42:52",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "CHRISTMASVIS",
+                    "name": "Christmas visits",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CHRISTMASVIS"
+                },
+                {
+                    "code": "REMOVEPAREN",
+                    "name": "Remove Outermost Parentheses",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/REMOVEPAREN"
+                },
+                {
+                    "code": "LONGGIVENSUM",
+                    "name": "Longest subarray with a given sum",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/LONGGIVENSUM"
+                },
+                {
+                    "code": "BSTITERATOR",
+                    "name": "Binary Search Tree Iterator",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/BSTITERATOR"
+                },
+                {
+                    "code": "TREEPATHSUM",
+                    "name": "Tree Path Sum",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/TREEPATHSUM"
+                },
+                {
+                    "code": "RIGTHSIDE",
+                    "name": "Right side view of Binary tree",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/RIGTHSIDE"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 16",
+            "contestCode": "DSAMONDAY16P",
+            "startDate": "2025-12-16 10:41:40",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "BIRTHDAYCHOC",
+                    "name": "Birthday Chocolates",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/BIRTHDAYCHOC"
+                },
+                {
+                    "code": "MAXCONSECU",
+                    "name": "Chef and Consecutive Ones",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MAXCONSECU"
+                },
+                {
+                    "code": "MATROTATE",
+                    "name": "Matrix Rotations",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MATROTATE"
+                },
+                {
+                    "code": "SLDW0103",
+                    "name": "Longest Substring Without Repeating Characters",
+                    "difficulty": 932,
+                    "problemUrl": "https://www.codechef.com/problems/SLDW0103"
+                },
+                {
+                    "code": "DSCPPAS267",
+                    "name": "Unique Subset",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/DSCPPAS267"
+                },
+                {
+                    "code": "SPSBTR",
+                    "name": "Special Substring",
+                    "difficulty": 1400,
+                    "problemUrl": "https://www.codechef.com/problems/SPSBTR"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 17",
+            "contestCode": "DSAMONDAY17P",
+            "startDate": "2025-12-23 09:48:10",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "CHEFPROFIT",
+                    "name": "Chefs profits",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CHEFPROFIT"
+                },
+                {
+                    "code": "LASTZERO",
+                    "name": "Move all the zeros to the last",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/LASTZERO"
+                },
+                {
+                    "code": "TWOSUMM",
+                    "name": "Chef and Pair of Elements",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/TWOSUMM"
+                },
+                {
+                    "code": "BSTCHECK",
+                    "name": "Check for BST",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/BSTCHECK"
+                },
+                {
+                    "code": "WCOUNT",
+                    "name": "Word Counting",
+                    "difficulty": 1640,
+                    "problemUrl": "https://www.codechef.com/problems/WCOUNT"
+                },
+                {
+                    "code": "CHEFSERVER",
+                    "name": "Chef Shortest Route",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CHEFSERVER"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 18",
+            "contestCode": "DSAMONDAY18P",
+            "startDate": "2025-12-30 10:36:30",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "CHEFANDGIFTS",
+                    "name": "Chef and New Year Gifts",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CHEFANDGIFTS"
+                },
+                {
+                    "code": "CHEFROMAN",
+                    "name": "Chef and Roman Numbers",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CHEFROMAN"
+                },
+                {
+                    "code": "STRINGTOINT",
+                    "name": "Chef and String to Integer",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/STRINGTOINT"
+                },
+                {
+                    "code": "PAINTSHODOWN",
+                    "name": "The Great Painting Showdown",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/PAINTSHODOWN"
+                },
+                {
+                    "code": "RECUR25",
+                    "name": "Pascal Triangle Element",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/RECUR25"
+                },
+                {
+                    "code": "MAXCROSSP",
+                    "name": "Maximal crosses",
+                    "difficulty": 1570,
+                    "problemUrl": "https://www.codechef.com/problems/MAXCROSSP"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 19",
+            "contestCode": "DSAMONDAY19P",
+            "startDate": "2026-01-06 09:19:12",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "CHEFSOFFICE",
+                    "name": "Chef shifting office",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CHEFSOFFICE"
+                },
+                {
+                    "code": "LONGESPREFIX",
+                    "name": "Longest Common Prefix",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/LONGESPREFIX"
+                },
+                {
+                    "code": "VALIDANAGRAM",
+                    "name": "Valid Anagram",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/VALIDANAGRAM"
+                },
+                {
+                    "code": "ROTATIONARAY",
+                    "name": "Find how many times the array have been rotated",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/ROTATIONARAY"
+                },
+                {
+                    "code": "WEXLT01",
+                    "name": "Chef Solves Palindrome Partitioning",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/WEXLT01"
+                },
+                {
+                    "code": "VERTEXCOLOR",
+                    "name": "Vertex Colouring Problem",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/VERTEXCOLOR"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 20",
+            "contestCode": "DSAMONDAY20P",
+            "startDate": "2026-01-13 10:04:43",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "CRICKETPRO",
+                    "name": "Cricket tournament profits",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CRICKETPRO"
+                },
+                {
+                    "code": "REMOVEDUPLIC",
+                    "name": "Remove Duplicates from Sorted Array",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/REMOVEDUPLIC"
+                },
+                {
+                    "code": "FIRSTNDLAST",
+                    "name": "First and last occurrence of a given number",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/FIRSTNDLAST"
+                },
+                {
+                    "code": "XORRANGE",
+                    "name": "XOR of numbers in a range",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/XORRANGE"
+                },
+                {
+                    "code": "PRIMENUMBERS",
+                    "name": "Prime factorisation of numbers",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/PRIMENUMBERS"
+                },
+                {
+                    "code": "RATMAZE",
+                    "name": "Rat In Maze",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/RATMAZE"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 21",
+            "contestCode": "DSAMONDAY21P",
+            "startDate": "2026-01-20 10:39:36",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "FINALMATCH",
+                    "name": "Chef and Final match",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/FINALMATCH"
+                },
+                {
+                    "code": "MAJORELEM",
+                    "name": "Find the majority element",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MAJORELEM"
+                },
+                {
+                    "code": "FRUITBASKET",
+                    "name": "Put fruits into basket",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/FRUITBASKET"
+                },
+                {
+                    "code": "PREORDER",
+                    "name": "Construct a BST from a preorder traversal",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/PREORDER"
+                },
+                {
+                    "code": "INORDERPOST",
+                    "name": "Construct binary tree from Inorder and Postorder",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/INORDERPOST"
+                },
+                {
+                    "code": "CONSECARDS",
+                    "name": "Consecutive Card Grouping",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CONSECARDS"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 22",
+            "contestCode": "DSAMONDAY22P",
+            "startDate": "2026-01-27 10:48:34",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "LADOOSPECIAL",
+                    "name": "Republic day ladoos",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/LADOOSPECIAL"
+                },
+                {
+                    "code": "MISSNDREPEAT",
+                    "name": "Find the repeating and missing number",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MISSNDREPEAT"
+                },
+                {
+                    "code": "SWAPTWONUMS",
+                    "name": "Swap two numbers",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/SWAPTWONUMS"
+                },
+                {
+                    "code": "SINGLESORTED",
+                    "name": "Lonely Element in Array",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/SINGLESORTED"
+                },
+                {
+                    "code": "HYBDD01",
+                    "name": "Chef Solves Course Schedule II",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/HYBDD01"
+                },
+                {
+                    "code": "SZICS01",
+                    "name": "Chef Counts Enclaves",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/SZICS01"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 23",
+            "contestCode": "DSAMONDAY23P",
+            "startDate": "2026-02-03 10:36:08",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "TENNISMATCH",
+                    "name": "Tennis Match",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/TENNISMATCH"
+                },
+                {
+                    "code": "MISSINPERM",
+                    "name": "Missing number in permutation",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MISSINPERM"
+                },
+                {
+                    "code": "REVERSEWORD",
+                    "name": "Reverse Words in a String",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/REVERSEWORD"
+                },
+                {
+                    "code": "COOKIEDIST",
+                    "name": "Cookie distribution",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/COOKIEDIST"
+                },
+                {
+                    "code": "COUNTSUBSETS",
+                    "name": "Count subsets with sum K",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/COUNTSUBSETS"
+                },
+                {
+                    "code": "CHEFANDTWOFR",
+                    "name": "Chef and His Two Friends",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CHEFANDTWOFR"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 24",
+            "contestCode": "DSAMONDAY24P",
+            "startDate": "2026-02-09 21:59:18",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "FPTYY01",
+                    "name": "Chef Counts Primes",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/FPTYY01"
+                },
+                {
+                    "code": "ROTATEARRAY",
+                    "name": "Rotate the array",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/ROTATEARRAY"
+                },
+                {
+                    "code": "XORRANGE",
+                    "name": "XOR of numbers in a range",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/XORRANGE"
+                },
+                {
+                    "code": "STOCKSPROFIT",
+                    "name": "Chef and Stock Profits",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/STOCKSPROFIT"
+                },
+                {
+                    "code": "GBHHA01",
+                    "name": "Chef Combines Intervals",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/GBHHA01"
+                },
+                {
+                    "code": "COCRZ01",
+                    "name": "Chef Removes Overlapping Intervals",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/COCRZ01"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 25",
+            "contestCode": "DSAMONDAY25P",
+            "startDate": "2026-02-17 11:27:17",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "PALINDRCHECK",
+                    "name": "Reverse Words in a String",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/PALINDRCHECK"
+                },
+                {
+                    "code": "PPMUH01",
+                    "name": "Chef Builds Queue Using Stacks",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/PPMUH01"
+                },
+                {
+                    "code": "NFXON01",
+                    "name": "Chef Circular Search",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/NFXON01"
+                },
+                {
+                    "code": "DRKTZ01",
+                    "name": "Chef Solves Asteroid Collision",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/DRKTZ01"
+                },
+                {
+                    "code": "MEXOPERATION",
+                    "name": "Maximum Possible MEX After Operations",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MEXOPERATION"
+                },
+                {
+                    "code": "IEIJT01",
+                    "name": "Chef Solves LRU Cache",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/IEIJT01"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 25",
+            "contestCode": "DSAMONDAY26P",
+            "startDate": "2026-02-24 13:14:05",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "REVERSEPAIRS",
+                    "name": "Count Reverse Pairs",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/REVERSEPAIRS"
+                },
+                {
+                    "code": "MAXPROSUBARR",
+                    "name": "Chef and the Magical Subarray",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MAXPROSUBARR"
+                },
+                {
+                    "code": "HBJRG01",
+                    "name": "Chef Counts Provinces",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/HBJRG01"
+                },
+                {
+                    "code": "MERGEKSORTED",
+                    "name": "Merge K sorted lists",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MERGEKSORTED"
+                },
+                {
+                    "code": "SZICS01",
+                    "name": "Chef Counts Enclaves",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/SZICS01"
+                },
+                {
+                    "code": "CONSECARDS",
+                    "name": "Consecutive Card Grouping",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CONSECARDS"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 27",
+            "contestCode": "DSAMONDAY27P",
+            "startDate": "2026-03-03 10:40:50",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "ALTNUMS",
+                    "name": "Alternating Array",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/ALTNUMS"
+                },
+                {
+                    "code": "PRINTSUBARAY",
+                    "name": "Print subarray with maximum subarray sum",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/PRINTSUBARAY"
+                },
+                {
+                    "code": "BWFPF01",
+                    "name": "Chef Builds Subsets",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/BWFPF01"
+                },
+                {
+                    "code": "VYYCI01",
+                    "name": "Chef Solves Combination Sum III",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/VYYCI01"
+                },
+                {
+                    "code": "NINJATRAIN",
+                    "name": "Ninja Training",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/NINJATRAIN"
+                },
+                {
+                    "code": "VUUDN01",
+                    "name": "Chef Calculates Edit Distance",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/VUUDN01"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 28",
+            "contestCode": "DSAMONDAY28P",
+            "startDate": "2026-03-10 09:40:52",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "ALTNUMS",
+                    "name": "Alternating Array",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/ALTNUMS"
+                },
+                {
+                    "code": "MAXPROSUBARR",
+                    "name": "Chef and the Magical Subarray",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MAXPROSUBARR"
+                },
+                {
+                    "code": "LARGESTBST",
+                    "name": "Largest bst in binary tree",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/LARGESTBST"
+                },
+                {
+                    "code": "BSTITERATOR",
+                    "name": "Binary Search Tree Iterator",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/BSTITERATOR"
+                },
+                {
+                    "code": "EKMPU01",
+                    "name": "Chef Finds Cheapest Flights",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/EKMPU01"
+                },
+                {
+                    "code": "SZICS01",
+                    "name": "Chef Counts Enclaves",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/SZICS01"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 29",
+            "contestCode": "DSAMONDAY29P",
+            "startDate": "2026-03-17 13:01:34",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "LLCYCLE",
+                    "name": "Detect Start of Cycle in Linked List",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/LLCYCLE"
+                },
+                {
+                    "code": "ADDONELL",
+                    "name": "Linked List Increment",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/ADDONELL"
+                },
+                {
+                    "code": "HSUON01",
+                    "name": "Chef Finds Next Greater Element",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/HSUON01"
+                },
+                {
+                    "code": "JQJTY01",
+                    "name": "Chef Calculates Subarray Minimums",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/JQJTY01"
+                },
+                {
+                    "code": "ZCIBE01",
+                    "name": "Chef Finds Single Number",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/ZCIBE01"
+                },
+                {
+                    "code": "TWOUNIQUE",
+                    "name": "Find the Two Unique Numbers",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/TWOUNIQUE"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 30",
+            "contestCode": "DSAMONDAY30P",
+            "startDate": "2026-03-24 11:51:49",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "INSERTPOS",
+                    "name": "Find the insert position",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/INSERTPOS"
+                },
+                {
+                    "code": "MINEATING",
+                    "name": "Minimum Eating Speed",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MINEATING"
+                },
+                {
+                    "code": "BOTTOMBINARY",
+                    "name": "Bottom view of binary tree",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/BOTTOMBINARY"
+                },
+                {
+                    "code": "SYMMETRICTRE",
+                    "name": "Symmetric binary tree",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/SYMMETRICTRE"
+                },
+                {
+                    "code": "BURNBT",
+                    "name": "Minimum time take to burn a BT from a given node",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/BURNBT"
+                },
+                {
+                    "code": "ITERATIVEPRE",
+                    "name": "Iterative Preorder Traversal of Binary Tree",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/ITERATIVEPRE"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 31",
+            "contestCode": "DSAMONDAY31P",
+            "startDate": "2026-03-31 00:29:03",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "MAXPATHSUM",
+                    "name": "Maximum Path Sum in a Binary Tree",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MAXPATHSUM"
+                },
+                {
+                    "code": "XGWUY01",
+                    "name": "Chef Finds Safe States",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/XGWUY01"
+                },
+                {
+                    "code": "VERTICALTRAV",
+                    "name": "Vertical Order Traversal of Binary Tree",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/VERTICALTRAV"
+                },
+                {
+                    "code": "TXBCN01",
+                    "name": "Chef Solves Word Break",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/TXBCN01"
+                },
+                {
+                    "code": "DEQCN01",
+                    "name": "Chef Swims Rising Water",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/DEQCN01"
+                },
+                {
+                    "code": "EIHKO01",
+                    "name": "Chef Counts Unique Paths",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/EIHKO01"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 32",
+            "contestCode": "DSAMONDAY32P",
+            "startDate": "2026-04-07 13:00:39",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "PREINPOST",
+                    "name": "Preorder, Inorder, and Postorder Traversal in one ",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/PREINPOST"
+                },
+                {
+                    "code": "NASTA01",
+                    "name": "Chef Maximizes Stock Profit - 2",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/NASTA01"
+                },
+                {
+                    "code": "INSERTBST",
+                    "name": "Insert a node in BST",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/INSERTBST"
+                },
+                {
+                    "code": "MPYSW01",
+                    "name": "Chef Builds Island",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/MPYSW01"
+                },
+                {
+                    "code": "IUAIS01",
+                    "name": "Chef Merges Accounts",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/IUAIS01"
+                },
+                {
+                    "code": "NZRYT01",
+                    "name": "Chef Finds Stock Profit - 3",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/NZRYT01"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 33",
+            "contestCode": "DSAMONDAY33P",
+            "startDate": "2026-04-14 10:45:45",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "HASHP03",
+                    "name": "Subarray Sum equals k",
+                    "difficulty": 1696,
+                    "problemUrl": "https://www.codechef.com/problems/HASHP03"
+                },
+                {
+                    "code": "MAXSUBARR",
+                    "name": "Maximum Subarray ",
+                    "difficulty": 1613,
+                    "problemUrl": "https://www.codechef.com/problems/MAXSUBARR"
+                },
+                {
+                    "code": "NEXTPERM",
+                    "name": "Next Permutation",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/NEXTPERM"
+                },
+                {
+                    "code": "PREP39",
+                    "name": "Binary Search - Power Function",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/PREP39"
+                },
+                {
+                    "code": "VISA02",
+                    "name": "Jump Game",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/VISA02"
+                },
+                {
+                    "code": "PREP31",
+                    "name": "Dynamic Programming - Minimum Jumps",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/PREP31"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 34",
+            "contestCode": "DSAMONDAY34P",
+            "startDate": "2026-04-21 09:11:57",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "RATINGPEPS",
+                    "name": "Rating people",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/RATINGPEPS"
+                },
+                {
+                    "code": "RECUR07",
+                    "name": "Print Pattern",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/RECUR07"
+                },
+                {
+                    "code": "DSAAGP36",
+                    "name": "Frequency of elements using Hashing",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/DSAAGP36"
+                },
+                {
+                    "code": "PREP51",
+                    "name": "Hashing - Minimum Window Substring",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/PREP51"
+                },
+                {
+                    "code": "RECUR31",
+                    "name": "Interleaving String",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/RECUR31"
+                },
+                {
+                    "code": "CANDYDIST",
+                    "name": "Candy Distribution",
+                    "difficulty": 668,
+                    "problemUrl": "https://www.codechef.com/problems/CANDYDIST"
+                }
+            ]
+        },
+        {
+            "name": "Monday Munch - DSA Challenge 35",
+            "contestCode": "DSAMONDAY35P",
+            "startDate": "2026-04-28 09:18:00",
+            "totalProblems": 6,
+            "problems": [
+                {
+                    "code": "CHESSTOUR",
+                    "name": "Chess tournament",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/CHESSTOUR"
+                },
+                {
+                    "code": "RUNCOMPARE",
+                    "name": "Running Comparison",
+                    "difficulty": 899,
+                    "problemUrl": "https://www.codechef.com/problems/RUNCOMPARE"
+                },
+                {
+                    "code": "PREP27",
+                    "name": "Hashing - Four Sum",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/PREP27"
+                },
+                {
+                    "code": "DSAAGP1098",
+                    "name": "Aggressive Cows",
+                    "difficulty": 932,
+                    "problemUrl": "https://www.codechef.com/problems/DSAAGP1098"
+                },
+                {
+                    "code": "PREP35",
+                    "name": "Graphs - Capture Regions",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/PREP35"
+                },
+                {
+                    "code": "KXTUW01",
+                    "name": "Chef Calculates Network Delay",
+                    "difficulty": -1,
+                    "problemUrl": "https://www.codechef.com/problems/KXTUW01"
+                }
+            ]
+        }
+    ]
+}
