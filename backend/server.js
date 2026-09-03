@@ -13,9 +13,11 @@ app.use(express.json());
 // --------------------------------------------------
 
 app.get("/", (req, res) => {
+
     res.json({
         message: "CodeChef Tracker Backend is running"
     });
+
 });
 
 
@@ -134,9 +136,13 @@ app.get("/api/contests", async (req, res) => {
 
 
         res.json({
+
             success: true,
+
             count: uniqueContests.length,
+
             contests: uniqueContests
+
         });
 
     } catch (error) {
@@ -147,8 +153,12 @@ app.get("/api/contests", async (req, res) => {
         );
 
         res.status(500).json({
+
             success: false,
-            message: "Failed to fetch CodeChef contests"
+
+            message:
+                "Failed to fetch CodeChef contests"
+
         });
 
     }
@@ -168,8 +178,11 @@ app.get("/api/contests/:contestCode", async (req, res) => {
     if (!/^[A-Za-z0-9_-]+$/.test(contestCode)) {
 
         return res.status(400).json({
+
             success: false,
+
             message: "Invalid contest code"
+
         });
 
     }
@@ -184,9 +197,9 @@ app.get("/api/contests/:contestCode", async (req, res) => {
         const data = response.data;
 
 
-        // --------------------------------------------------
+        // ----------------------------------------------
         // Multi-division contest
-        // --------------------------------------------------
+        // ----------------------------------------------
 
         if (
             data.child_contests &&
@@ -198,11 +211,13 @@ app.get("/api/contests/:contestCode", async (req, res) => {
             ).map((division) => {
 
                 const divisionNumber =
-                    division.split("_")[1];
+                    Number(
+                        division.split("_")[1]
+                    );
 
                 const suffix =
                     String.fromCharCode(
-                        64 + Number(divisionNumber)
+                        64 + divisionNumber
                     );
 
                 return {
@@ -237,9 +252,9 @@ app.get("/api/contests/:contestCode", async (req, res) => {
         }
 
 
-        // --------------------------------------------------
-        // Single contest
-        // --------------------------------------------------
+        // ----------------------------------------------
+        // Single division contest
+        // ----------------------------------------------
 
         return res.json({
 
@@ -275,7 +290,7 @@ app.get("/api/contests/:contestCode", async (req, res) => {
 
 
 // --------------------------------------------------
-// Get problems for a specific division
+// Get problems for a Starters division
 // --------------------------------------------------
 
 app.get(
@@ -307,12 +322,27 @@ app.get(
 
         try {
 
-            // ----------------------------------------------
-            // Convert div_1 → A
-            // div_2 → B
-            // div_3 → C
-            // div_4 → D
-            // ----------------------------------------------
+            // ------------------------------------------
+            // This endpoint is for Starters divisions
+            // ------------------------------------------
+
+            if (
+                !contestCode
+                    .toUpperCase()
+                    .startsWith("START")
+            ) {
+
+                return res.status(400).json({
+
+                    success: false,
+
+                    message:
+                        "This endpoint is only for Starters divisions"
+
+                });
+
+            }
+
 
             const divisionNumber =
                 Number(
@@ -361,40 +391,116 @@ app.get(
             }
 
 
-            const problems =
-                Object.values(data.problems)
+            // ------------------------------------------
+            // Get problem information
+            // ------------------------------------------
 
-                    .filter((problem) => {
+            const problems = Object.values(
+                data.problems
+            )
+            .filter((problem) => {
 
-                        return (
-                            problem.category_name ===
-                            "main"
-                        );
+                return (
+                    problem.category_name === "main"
+                );
+
+            })
+            .map((problem) => {
+
+                return {
+
+                    code:
+                        problem.code,
+
+                    name:
+                        problem.name,
+
+                    successfulSubmissions:
+                        problem.successful_submissions,
+
+                    accuracy:
+                        problem.accuracy,
+
+                    problemUrl:
+                        problem.problem_url
+
+                };
+
+            });
+
+
+            // ------------------------------------------
+            // Fetch difficulty
+            // ------------------------------------------
+
+            const problemsWithDifficulty =
+                await Promise.all(
+
+                    problems.map(async (problem) => {
+
+                        try {
+
+                            const difficultyResponse =
+                                await axios.get(
+                                    `https://www.codechef.com/api/contests/PRACTICE/problems/${problem.code}`
+                                );
+
+
+                            const difficultyData =
+                                difficultyResponse.data;
+
+
+                            return {
+
+                                ...problem,
+
+                                difficulty:
+                                    difficultyData
+                                        .difficulty_rating ||
+                                    null
+
+                            };
+
+                        } catch (error) {
+
+                            console.log(
+                                `Difficulty not found for ${problem.code}`
+                            );
+
+                            return {
+
+                                ...problem,
+
+                                difficulty: null
+
+                            };
+
+                        }
 
                     })
 
-                    .map((problem) => {
+                );
+
+
+            // ------------------------------------------
+            // Add editorial link
+            // ------------------------------------------
+
+            const finalProblems =
+                problemsWithDifficulty.map(
+                    (problem) => {
 
                         return {
 
-                            code:
-                                problem.code,
+                            ...problem,
 
-                            name:
-                                problem.name,
-
-                            successfulSubmissions:
-                                problem.successful_submissions,
-
-                            accuracy:
-                                problem.accuracy,
-
-                            problemUrl:
-                                problem.problem_url
+                            editorialUrl:
+                                `https://discuss.codechef.com/t/${problem.code.toLowerCase()}-editorial/`
 
                         };
 
-                    });
+                    }
+                );
 
 
             res.json({
@@ -407,9 +513,9 @@ app.get(
 
                 actualContestCode,
 
-                count: problems.length,
+                count: finalProblems.length,
 
-                problems
+                problems: finalProblems
 
             });
 
@@ -429,7 +535,7 @@ app.get(
                 success: false,
 
                 message:
-                    `Failed to fetch problems`
+                    "Failed to fetch problems"
 
             });
 
@@ -437,6 +543,147 @@ app.get(
 
     }
 );
+
+
+// --------------------------------------------------
+// Get all Monday Munch challenges
+// --------------------------------------------------
+
+app.get("/api/monday-munch", async (req, res) => {
+
+    try {
+
+        const response = await axios.get(
+            "https://www.codechef.com/api/practice/syllabus/dsa-challenges?roadmapSlug="
+        );
+
+        const data = response.data;
+
+
+        if (
+            data.status !== "success" ||
+            !data.modules
+        ) {
+
+            return res.status(500).json({
+
+                success: false,
+
+                message:
+                    "Failed to fetch Monday Munch data"
+
+            });
+
+        }
+
+
+        const challenges = [];
+
+
+        // ------------------------------------------
+        // Extract every challenge
+        // ------------------------------------------
+
+        for (const module of data.modules) {
+
+            if (
+                !module.submodules ||
+                !Array.isArray(module.submodules)
+            ) {
+                continue;
+            }
+
+
+            for (const submodule of module.submodules) {
+
+                const problems =
+                    (
+                        submodule.problems_with_status ||
+                        []
+                    ).map((problem) => {
+
+                        const difficultyRating =
+                            Number(
+                                problem.difficulty_rating
+                            );
+
+
+                        return {
+
+                            code:
+                                problem.code,
+
+                            name:
+                                problem.name,
+
+                            difficulty:
+                                difficultyRating === -1
+                                    ? null
+                                    : difficultyRating,
+
+                            difficultyType:
+                                problem.difficulty_type,
+
+                            problemUrl:
+                                `https://www.codechef.com/problems/${problem.code}`
+
+                        };
+
+                    });
+
+
+                challenges.push({
+
+                    name:
+                        submodule.name,
+
+                    contestCode:
+                        submodule.contest_code,
+
+                    startDate:
+                        submodule.start_date,
+
+                    totalProblems:
+                        submodule.total_problems,
+
+                    problems
+
+                });
+
+            }
+
+        }
+
+
+        res.json({
+
+            success: true,
+
+            count: challenges.length,
+
+            challenges
+
+        });
+
+    } catch (error) {
+
+        console.error(
+            "Error fetching Monday Munch:",
+            error.message
+        );
+
+        res.status(500).json({
+
+            success: false,
+
+            message:
+                "Failed to fetch Monday Munch challenges"
+
+        });
+
+    }
+
+});
 
 
 // --------------------------------------------------
