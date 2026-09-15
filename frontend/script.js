@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://codechef-companion-1.onrender.com";
 
 let allContests = [];
 let currentDivision = "div_1";
